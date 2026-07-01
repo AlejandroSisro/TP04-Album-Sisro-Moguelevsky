@@ -7,4 +7,9 @@
     <RootNamespace>TP04_Album_Sisro_Moguelevsky</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.79" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.2" />
+  </ItemGroup>
+
 </Project>
