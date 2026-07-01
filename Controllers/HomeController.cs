@@ -15,6 +15,11 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        BD Album = new BD();
+        list<string> figurita = Album.ObtenerFiguritas();
+        Random rnd = new Random();
+        string seleccionada = figurita[rnd.Next(0,figurita.Count)];
+        ViewBag.Figurita = seleccionada;
         return View();
     }
 
