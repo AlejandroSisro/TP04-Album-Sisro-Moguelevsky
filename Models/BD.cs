@@ -5,14 +5,14 @@ namespace TP04_Album_Sisro_Moguelevsky.Models;
 public class BD
 {
     private string _connectionString = @"Server=localhost;DataBase=AlbumVirtual; Integrated Security=True; TrustServerCertificate=True;";
-    public List<Figuritas> obtenerFiguritas()
+    public List<Figurita> obtenerFiguritas()
     {
-    List<Patente> patentes = new List<Patente>();
+    List<Figurita> figuritas = new List<Figurita>();
     using(SqlConnection connection = new SqlConnection(_connectionString))
     {
-    string query = "SELECT FROM Patentes";
-    patentes connection.Query<Patente>(query).ToList();
+    string query = "SELECT * FROM Figuritas";
+    figuritas = connection.Query<Figurita>(query).ToList();
     }
-    return patentes;
+    return figuritas ;
     }
 }
