@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [AlbumVirtual]    Script Date: 30/6/2026 08:32:10 ******/
+/****** Object:  Database [AlbumVirtual]    Script Date: 7/7/2026 09:02:39 ******/
 CREATE DATABASE [AlbumVirtual]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,133 +79,116 @@ ALTER DATABASE [AlbumVirtual] SET QUERY_STORE = OFF
 GO
 USE [AlbumVirtual]
 GO
-/****** Object:  User [alumno]    Script Date: 30/6/2026 08:32:10 ******/
+/****** Object:  User [alumno]    Script Date: 7/7/2026 09:02:39 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Album]    Script Date: 30/6/2026 08:32:10 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Album](
-	[id] [int] IDENTITY(1,1) NOT NULL,
-	[fkFiguritas] [int] NOT NULL,
-	[fkGrupos] [int] NOT NULL,
-	[fkSelecciones] [int] NOT NULL,
- CONSTRAINT [PK_Album] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Figuritas]    Script Date: 30/6/2026 08:32:10 ******/
+/****** Object:  Table [dbo].[Figuritas]    Script Date: 7/7/2026 09:02:39 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Figuritas](
-	[id] [int] IDENTITY(1,1) NOT NULL,
-	[fkJugadores] [int] NOT NULL,
-	[fkSeleccion] [int] NOT NULL,
+	[idFigurita] [int] IDENTITY(1,1) NOT NULL,
+	[idJugador] [int] NOT NULL,
+	[cantidad] [int] NOT NULL,
  CONSTRAINT [PK_Figuritas] PRIMARY KEY CLUSTERED 
 (
-	[id] ASC
+	[idFigurita] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Jugadores]    Script Date: 30/6/2026 08:32:10 ******/
+/****** Object:  Table [dbo].[Jugadores]    Script Date: 7/7/2026 09:02:39 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Jugadores](
-	[id] [int] IDENTITY(1,1) NOT NULL,
+	[idJugador] [int] IDENTITY(1,1) NOT NULL,
 	[nombre] [varchar](50) NOT NULL,
-	[apellido] [varchar](50) NOT NULL,
-	[numeroCamiseta] [int] NOT NULL,
-	[fechaNacimiento] [date] NOT NULL,
-	[fkPais] [int] NOT NULL,
+	[foto] [varchar](50) NOT NULL,
+	[idSeleccion] [int] NOT NULL,
  CONSTRAINT [PK_Jugadores] PRIMARY KEY CLUSTERED 
 (
-	[id] ASC
+	[idJugador] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Selecciones]    Script Date: 30/6/2026 08:32:10 ******/
+/****** Object:  Table [dbo].[Selecciones]    Script Date: 7/7/2026 09:02:39 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Selecciones](
-	[id] [int] IDENTITY(1,1) NOT NULL,
+	[idSeleccion] [int] IDENTITY(1,1) NOT NULL,
 	[nombrePais] [varchar](50) NOT NULL,
-	[fkJugador] [int] NOT NULL,
-	[fkGrupo] [int] NOT NULL,
+	[grupo] [varchar](1) NOT NULL,
  CONSTRAINT [PK_Selecciones] PRIMARY KEY CLUSTERED 
 (
-	[id] ASC
+	[idSeleccion] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Sobres]    Script Date: 30/6/2026 08:32:10 ******/
-SET ANSI_NULLS ON
+SET IDENTITY_INSERT [dbo].[Selecciones] ON 
+
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (1, N'Mexico', N'A')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (2, N'Sudafrica', N'A')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (3, N'Corea del Sur', N'A')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (4, N'Czechia', N'A')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (5, N'Canada', N'B')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (6, N'Bosnia y Herzegovina', N'B')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (7, N'Qatar', N'B')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (8, N'Suiza', N'B')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (9, N'Brasil', N'C')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (10, N'Marruecos', N'C')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (11, N'Haiti', N'C')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (12, N'Escocia', N'C')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (13, N'Estados Unidos', N'D')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (14, N'Paraguay', N'D')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (15, N'Australia', N'D')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (16, N'Turquia', N'D')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (17, N'Alemania', N'E')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (18, N'Curazao', N'E')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (19, N'Costa De Marfil', N'E')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (20, N'Ecuador', N'E')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (21, N'Paises Bajos', N'F')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (22, N'Japon', N'F')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (23, N'Suecia', N'F')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (24, N'Tunez', N'F')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (25, N'Belgica', N'G')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (26, N'Egipto', N'G')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (27, N'Iran', N'G')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (28, N'Nueva Zelanda', N'G')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (29, N'España', N'H')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (30, N'Cabo Verde', N'H')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (31, N'Arabia Saudita', N'H')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (32, N'Uruguay', N'H')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (33, N'Francia', N'I')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (34, N'Senegal', N'I')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (35, N'Irak', N'I')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (36, N'Noruega', N'I')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (37, N'Argentina', N'J')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (38, N'Argelia', N'J')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (39, N'Austria', N'J')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (40, N'Jordania', N'J')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (41, N'Portugal', N'K')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (42, N'Republica Democratica del Congo', N'K')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (43, N'Uzbekistan', N'K')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (44, N'Colombia', N'K')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (45, N'Inglaterra', N'L')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (46, N'Croacia', N'L')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (47, N'Ghana', N'L')
+INSERT [dbo].[Selecciones] ([idSeleccion], [nombrePais], [grupo]) VALUES (48, N'Panama', N'L')
+SET IDENTITY_INSERT [dbo].[Selecciones] OFF
 GO
-SET QUOTED_IDENTIFIER ON
+ALTER TABLE [dbo].[Figuritas]  WITH CHECK ADD  CONSTRAINT [FK_Figuritas_Jugadores] FOREIGN KEY([idJugador])
+REFERENCES [dbo].[Jugadores] ([idJugador])
 GO
-CREATE TABLE [dbo].[Sobres](
-	[id] [int] IDENTITY(1,1) NOT NULL,
-	[fkFiguritas] [int] NOT NULL,
-	[cantidadFiguritas] [int] NOT NULL,
- CONSTRAINT [PK_Sobres] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
+ALTER TABLE [dbo].[Figuritas] CHECK CONSTRAINT [FK_Figuritas_Jugadores]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 30/6/2026 08:32:10 ******/
-SET ANSI_NULLS ON
+ALTER TABLE [dbo].[Jugadores]  WITH CHECK ADD  CONSTRAINT [FK_Jugadores_Selecciones] FOREIGN KEY([idSeleccion])
+REFERENCES [dbo].[Selecciones] ([idSeleccion])
 GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Usuarios](
-	[id] [int] IDENTITY(1,1) NOT NULL,
-	[nombreUsuario] [varchar](50) NOT NULL,
-	[fkAlbum] [int] NOT NULL,
- CONSTRAINT [PK_Usuarios] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-ALTER TABLE [dbo].[Album]  WITH CHECK ADD  CONSTRAINT [FK_Album_Figuritas] FOREIGN KEY([fkFiguritas])
-REFERENCES [dbo].[Figuritas] ([id])
-GO
-ALTER TABLE [dbo].[Album] CHECK CONSTRAINT [FK_Album_Figuritas]
-GO
-ALTER TABLE [dbo].[Album]  WITH CHECK ADD  CONSTRAINT [FK_Album_Grupos] FOREIGN KEY([fkGrupos])
-REFERENCES [dbo].[Grupos] ([id])
-GO
-ALTER TABLE [dbo].[Album] CHECK CONSTRAINT [FK_Album_Grupos]
-GO
-ALTER TABLE [dbo].[Selecciones]  WITH CHECK ADD  CONSTRAINT [FK_Selecciones_Grupos] FOREIGN KEY([fkGrupo])
-REFERENCES [dbo].[Grupos] ([id])
-GO
-ALTER TABLE [dbo].[Selecciones] CHECK CONSTRAINT [FK_Selecciones_Grupos]
-GO
-ALTER TABLE [dbo].[Selecciones]  WITH CHECK ADD  CONSTRAINT [FK_Selecciones_Jugadores] FOREIGN KEY([fkJugador])
-REFERENCES [dbo].[Jugadores] ([id])
-GO
-ALTER TABLE [dbo].[Selecciones] CHECK CONSTRAINT [FK_Selecciones_Jugadores]
-GO
-ALTER TABLE [dbo].[Sobres]  WITH CHECK ADD  CONSTRAINT [FK_Sobres_Figuritas] FOREIGN KEY([fkFiguritas])
-REFERENCES [dbo].[Figuritas] ([id])
-GO
-ALTER TABLE [dbo].[Sobres] CHECK CONSTRAINT [FK_Sobres_Figuritas]
-GO
-ALTER TABLE [dbo].[Usuarios]  WITH CHECK ADD  CONSTRAINT [FK_Usuarios_Album] FOREIGN KEY([fkAlbum])
-REFERENCES [dbo].[Album] ([id])
-GO
-ALTER TABLE [dbo].[Usuarios] CHECK CONSTRAINT [FK_Usuarios_Album]
+ALTER TABLE [dbo].[Jugadores] CHECK CONSTRAINT [FK_Jugadores_Selecciones]
 GO
 USE [master]
 GO
