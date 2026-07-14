@@ -1,31 +1,69 @@
-html {
-  font-size: 14px;
+body
+{
+  background-color: #F4F0EA;
 }
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+h1,h2
+{
+  color: #1A1A1A;
+  text-align: center;
 }
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+section
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-html {
-  position: relative;
-  min-height: 100%;
+.Bosnia
+{
+  background-color: #002F6C;
+  border-radius: 25px;
 }
-
-body {
-  margin-bottom: 60px;
+.Bosnia h2
+{
+    color:#FFCD00;
 }
-
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.Qatar
+{
+  background-color: #8A1538;
+  border-radius: 25px;
 }
-
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.Qatar h2
+{
+    color:#F4F0EA;
+}
+.Brasil
+{
+    background-color: #009739;
+    border-radius: 25px;
+}
+.Brasil h2
+{
+    color: #FEDD00;
+}
+.Alemania
+{
+    background-color: #DD0000;
+    border-radius: 25px; 
+}
+.Alemania h2
+{
+    color:#FFCC00;
+}
+.CostaDeMarfil
+{
+    background-color: #09A440;
+    border-radius: 25px; 
+}
+.CostaDeMarfil h2
+{
+    color:#FFFFFF;
+}
+.Suecia
+{
+    background-color: #006AA7;
+    border-radius: 25px; 
+}
+.Suecia h2
+{
+    color: #FECC02;
 }
