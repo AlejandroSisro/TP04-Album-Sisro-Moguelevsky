@@ -54,6 +54,43 @@ jugadores = [
     ("mozgovoy.svg", "MOZGOVOY", "6", "UZBEKISTAN", "#0072CE"),
     ("urunov.svg", "URUNOV", "17", "UZBEKISTAN", "#0072CE"),
     ("yusupov.svg", "YUSUPOV", "1", "UZBEKISTAN", "#0072CE"),
+
+    ("fofana.svg", "FOFANA", "1", "CÔTE D’IVOIRE", "#FF8200"),
+    ("diallo.svg", "DIALLO", "15", "CÔTE D’IVOIRE", "#FF8200"),
+    ("diomandé.svg", "Y. DIOMANDÉ", "11", "CÔTE D’IVOIRE", "#FF8200"),
+    ("adingra.svg", "ADINGRA", "10", "CÔTE D’IVOIRE", "#FF8200"),
+    ("ndicka.svg", "NDICKA", "21", "CÔTE D’IVOIRE", "#FF8200"),
+
+    ("mpasi.svg", "MPASI", "1", "RD. CONGO", "#0085CA"),
+    ("kakuta.svg", "KAKUTA", "14", "RD. CONGO", "#0085CA"),
+    ("mbuku.svg", "MBUKU", "7", "RD. CONGO", "#0085CA"),
+    ("mayele.svg", "MAYELE", "19", "RD. CONGO", "#0085CA"),
+    ("wissa.svg", "WISSA", "20", "RD. CONGO", "#0085CA"),
+
+    ("abunada.svg", "ABUNADA", "1", "QATAR", "#8A1538"),
+    ("mendes.svg", "MENDES", "3", "QATAR", "#8A1538"),
+    ("hatem.svg", "HATEM", "6", "QATAR", "#8A1538"),
+    ("ali.svg", "ALI", "19", "QATAR", "#8A1538"),
+    ("jamshid.svg", "JAMSHID", "24", "QATAR", "#8A1538"),
+
+    ("zetterstrom.svg", "ZETTERSTRÖM", "1", "SUECIA", "#006AA7"),
+    ("elanga.svg", "ELANGA", "11", "SUECIA", "#006AA7"),
+    ("gyokeres.svg", "GYÖKERES", "17", "SUECIA", "#006AA7"),
+    ("lindelof.svg", "LINDELÖF", "3", "SUECIA", "#006AA7"),
+    ("bernhardsson.svg", "BERNHARDSSON", "21", "SUECIA", "#006AA7"),
+
+    ("nyland.svg", "NYLAND", "1", "NORUEGA", "#BA0C2F"),
+    ("odegaard.svg", "ØDEGAARD", "10", "NORUEGA", "#BA0C2F"),
+    ("haaland.svg", "HAALAND", "9", "NORUEGA", "#BA0C2F"),
+    ("nusa.svg", "NUSA", "20", "NORUEGA", "#BA0C2F"),
+    ("bobb.svg", "BOBB", "22", "NORUEGA", "#BA0C2F"),
+
+    ("zidane.svg", "ZIDANE", "23", "ARGELIA", "#006633"),
+    ("maza.svg", "MAZA", "22", "ARGELIA", "#006633"),
+    ("mandi.svg", "MANDI", "2", "ARGELIA", "#006633"),
+    ("boudaoui.svg", "BOUDAOUI", "14", "ARGELIA", "#006633"),
+    ("gouiri.svg", "GOUIRI", "9", "ARGELIA", "#006633"),
+
 ]
 
 template = '''<svg width="200" height="280" xmlns="http://www.w3.org/2000/svg">
