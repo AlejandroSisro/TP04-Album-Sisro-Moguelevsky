@@ -1,6 +1,6 @@
 body
 {
-  background-color: #F4F0EA;
+  background-color: #E2E8F0;
 }
 h1,h2
 {
@@ -13,10 +13,13 @@ section
     margin-left: auto;
     margin-right: auto;
 }
+div
+{
+    border-radius: 25px; 
+}
 .Bosnia
 {
   background-color: #002F6C;
-  border-radius: 25px;
 }
 .Bosnia h2
 {
@@ -25,7 +28,8 @@ section
 .Qatar
 {
   background-color: #8A1538;
-  border-radius: 25px;
+  border-bottom: 5px solid #F4F0EA;
+  
 }
 .Qatar h2
 {
@@ -34,7 +38,7 @@ section
 .Brasil
 {
     background-color: #009739;
-    border-radius: 25px;
+    border-bottom: 5px solid #012169;
 }
 .Brasil h2
 {
@@ -42,8 +46,8 @@ section
 }
 .Alemania
 {
-    background-color: #DD0000;
-    border-radius: 25px; 
+    background-color: #000000;
+    border-bottom: 5px solid #FFCC00;
 }
 .Alemania h2
 {
@@ -52,18 +56,99 @@ section
 .CostaDeMarfil
 {
     background-color: #09A440;
-    border-radius: 25px; 
+    border-bottom: 5px solid #FF8200;
 }
 .CostaDeMarfil h2
 {
-    color:#FFFFFF;
+    color:#FF8200;
 }
 .Suecia
 {
     background-color: #006AA7;
-    border-radius: 25px; 
+    border-bottom: 5px solid #FECC02;
 }
 .Suecia h2
 {
     color: #FECC02;
+}
+.España
+{
+    background-color: #AA151B;
+    border-bottom: 5px solid #F1BF00;
+}
+.España h2
+{
+    color: #F1BF00;
+}
+.CaboVerde
+{
+    background-color: #003DA5;
+    border-bottom: 5px solid #EF3340;
+}
+.CaboVerde h2
+{
+    color: #FFFFFF;
+}
+.Francia
+{
+    background-color: #000091;
+    border-bottom: 5px solid #E1000F;
+}
+.Francia h2
+{
+    color: #FFFFFF;
+}
+.Noruega
+{
+    background-color: #BA0C2F;
+    border-bottom: 5px solid #00205B;
+}
+.Noruega h2
+{
+    color: #FFFFFF;
+}
+.Argentina
+{
+    background-color: #6CACE4;
+    border-bottom: 5px solid #FFB81C;
+}
+.Argentina h2
+{
+    color: #FFFFFF;
+}
+.Argelia
+{
+    background-color: #006633;
+    border-bottom: 5px solid #D21034;
+}
+.Argelia h2
+{
+    color: #FFFFFF;
+}
+.RDCongo
+{
+    background-color: #0085CA;
+    border-bottom: 5px solid #EF3340;
+}
+.RDCongo h2
+{
+    color: #FFD100;
+}
+.Uzbekistan
+{
+    background-color: #0072CE;
+    border-bottom: 5px solid #DA291C;
+}
+.Uzbekistan h2
+{
+    color: #FFFFFF;
+}
+.Inglaterra
+{
+    background-color: #FFFFFF;
+    border-bottom: 5px solid #CE1124;
+}
+.Inglaterra h2
+{
+    color: #CE1124;
 }
