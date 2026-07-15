@@ -3,7 +3,6 @@
     public class Seleccion
     {
         public int IdSeleccion { get; set; }
-        public int NumeroCamiseta { get; set; }
         public string Nombre { get; set; }
         public string Grupo { get; set; }
     }
