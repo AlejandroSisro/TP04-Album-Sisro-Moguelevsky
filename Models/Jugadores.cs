@@ -1,21 +1,22 @@
 namespace TP04_Album_Sisro_Moguelevsky.Models;
 
-public class Jugador
+public class Jugadores
 {
-    public int IdJugador { get; set; }
-    public string Nombre { get; set; }
+    public int idJugador { get; set; }
+    public string nombre { get; set; }
     public string Apellido { get; set; }
-    public int NumeroCamiseta { get; set; }
-    public string Posicion { get; set; }
-    public int Edad { get; set; }
-    public string Imagen { get; set; }
-    public int IdSeleccion { get; set; }
-    public Jugador()
+    public int numeroCamiseta { get; set; }
+    public string posicion { get; set; }
+    public int edad { get; set; }
+    public string foto { get; set; }
+    public int idSeleccion { get; set; }
+    public jugador()
     {
     }
 
     public string NombreCompleto()
     {
-        return Nombre + " " + Apellido;
+        string nombreCompleto = Nombre + " " + Apellido;
+        return nombreCompleto;
     }
 }
