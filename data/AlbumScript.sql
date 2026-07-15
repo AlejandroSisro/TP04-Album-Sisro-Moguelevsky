@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [AlbumVirtual]    Script Date: 14/7/2026 08:20:22 ******/
+/****** Object:  Database [AlbumVirtual]    Script Date: 15/7/2026 08:47:07 ******/
 CREATE DATABASE [AlbumVirtual]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [AlbumVirtual] SET QUERY_STORE = OFF
 GO
 USE [AlbumVirtual]
 GO
-/****** Object:  User [alumno]    Script Date: 14/7/2026 08:20:22 ******/
+/****** Object:  User [alumno]    Script Date: 15/7/2026 08:47:07 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Figuritas]    Script Date: 14/7/2026 08:20:22 ******/
+/****** Object:  Table [dbo].[Figuritas]    Script Date: 15/7/2026 08:47:07 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -91,13 +91,14 @@ CREATE TABLE [dbo].[Figuritas](
 	[idFigurita] [int] IDENTITY(1,1) NOT NULL,
 	[idJugador] [int] NOT NULL,
 	[cantidad] [int] NOT NULL,
+	[numeroCamiseta] [int] NOT NULL,
  CONSTRAINT [PK_Figuritas] PRIMARY KEY CLUSTERED 
 (
 	[idFigurita] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Jugadores]    Script Date: 14/7/2026 08:20:22 ******/
+/****** Object:  Table [dbo].[Jugadores]    Script Date: 15/7/2026 08:47:07 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -113,7 +114,7 @@ CREATE TABLE [dbo].[Jugadores](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Selecciones]    Script Date: 14/7/2026 08:20:22 ******/
+/****** Object:  Table [dbo].[Selecciones]    Script Date: 15/7/2026 08:47:07 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -130,81 +131,81 @@ CREATE TABLE [dbo].[Selecciones](
 GO
 SET IDENTITY_INSERT [dbo].[Figuritas] ON 
 
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (1, 1, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (2, 2, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (3, 3, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (4, 4, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (5, 5, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (6, 6, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (7, 7, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (8, 8, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (9, 9, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (10, 10, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (11, 11, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (12, 12, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (13, 13, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (14, 14, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (15, 15, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (16, 16, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (17, 17, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (18, 18, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (19, 19, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (20, 20, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (21, 21, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (22, 22, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (23, 23, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (24, 24, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (25, 25, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (26, 26, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (27, 27, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (28, 28, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (29, 29, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (30, 30, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (31, 31, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (32, 32, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (33, 33, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (34, 34, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (35, 35, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (36, 36, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (37, 37, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (38, 38, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (39, 39, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (40, 40, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (41, 41, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (42, 42, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (43, 43, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (44, 44, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (45, 45, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (46, 46, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (47, 47, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (48, 48, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (49, 49, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (50, 50, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (51, 51, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (52, 52, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (53, 53, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (54, 54, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (55, 55, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (56, 56, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (57, 57, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (58, 58, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (59, 59, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (60, 60, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (61, 61, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (62, 62, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (63, 63, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (64, 64, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (65, 65, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (66, 66, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (67, 67, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (68, 68, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (69, 69, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (70, 70, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (71, 71, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (72, 72, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (73, 73, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (74, 74, 0)
-INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad]) VALUES (75, 75, 0)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (1, 1, 0, 10)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (2, 2, 0, 9)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (3, 3, 0, 23)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (4, 4, 0, 24)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (5, 5, 0, 13)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (6, 6, 0, 10)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (7, 7, 0, 7)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (8, 8, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (9, 9, 0, 5)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (10, 10, 0, 4)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (11, 11, 0, 26)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (12, 12, 0, 9)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (13, 13, 0, 23)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (14, 14, 0, 11)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (15, 15, 0, 4)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (16, 16, 0, 10)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (17, 17, 0, 7)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (18, 18, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (19, 19, 0, 6)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (20, 20, 0, 4)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (21, 21, 0, 25)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (22, 22, 0, 6)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (23, 23, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (24, 24, 0, 7)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (25, 25, 0, 2)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (26, 26, 0, 9)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (27, 27, 0, 7)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (28, 28, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (29, 29, 0, 22)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (30, 30, 0, 6)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (31, 31, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (32, 32, 0, 11)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (33, 33, 0, 4)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (34, 34, 0, 7)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (35, 35, 0, 5)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (36, 36, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (37, 37, 0, 3)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (38, 38, 0, 6)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (39, 39, 0, 9)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (40, 40, 0, 11)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (41, 41, 0, 14)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (42, 42, 0, 24)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (43, 43, 0, 6)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (44, 44, 0, 17)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (45, 45, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (46, 46, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (47, 47, 0, 15)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (48, 48, 0, 11)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (49, 49, 0, 10)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (50, 50, 0, 21)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (51, 51, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (52, 52, 0, 14)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (53, 53, 0, 7)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (54, 54, 0, 19)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (55, 55, 0, 20)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (56, 56, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (57, 57, 0, 3)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (58, 58, 0, 6)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (59, 59, 0, 19)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (60, 60, 0, 24)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (61, 61, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (62, 62, 0, 11)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (63, 63, 0, 17)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (64, 64, 0, 3)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (65, 65, 0, 21)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (66, 66, 0, 1)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (67, 67, 0, 10)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (68, 68, 0, 9)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (69, 69, 0, 20)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (70, 70, 0, 22)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (71, 71, 0, 23)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (72, 72, 0, 22)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (73, 73, 0, 2)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (74, 74, 0, 14)
+INSERT [dbo].[Figuritas] ([idFigurita], [idJugador], [cantidad], [numeroCamiseta]) VALUES (75, 75, 0, 9)
 SET IDENTITY_INSERT [dbo].[Figuritas] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Jugadores] ON 
