@@ -1,6 +1,8 @@
 body
 {
-  background-color: #222a31;
+    background-color: #222a31;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em
 }
 h1,h2
 {
@@ -39,7 +41,7 @@ div
 .Brasil
 {
     background-color: #009739;
-    border-bottom: 5px solid #012169;
+    border-bottom: 5px solid #FEDD00;
 }
 .Brasil h2
 {
