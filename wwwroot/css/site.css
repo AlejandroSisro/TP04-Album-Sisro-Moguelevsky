@@ -1,10 +1,10 @@
 body
 {
-  background-color: #E2E8F0;
+  background-color: #222a31;
 }
 h1,h2
 {
-  color: #1A1A1A;
+  color: #0F8A8B;
   text-align: center;
 }
 section
@@ -20,6 +20,7 @@ div
 .Bosnia
 {
   background-color: #002F6C;
+  border-bottom: 5px solid #FFCD00;
 }
 .Bosnia h2
 {
