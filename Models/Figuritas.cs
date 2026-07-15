@@ -2,9 +2,10 @@ namespace TP04_Album_Sisro_Moguelevsky.Models;
 
 public class Figuritas
 {
-    public int IdFigurita { get; set; }
-    public int IdJugador { get; set; }
-    public int Cantidad { get; set; }
+    public int idFigurita { get; set; }
+    public int idJugador { get; set; }
+    public int cantidad { get; set; }
+    public int numeroCamiseta { get; set; }
 }
 public class Figuritas
 {
