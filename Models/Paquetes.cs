@@ -5,8 +5,8 @@ public class Paquete
     public int IdPaquete { get; set; }
     public DateTime FechaApertura { get; set; }
     public int UsuarioId { get; set; }
-    public List<Jugador> Figuritas { get; set; } = new List<Jugador>();
-    public void AgregarFigurita(Jugador jugador)
+    public List<Jugadores> Figuritas { get; set; } = new List<Jugadores>();
+    public void AgregarFigurita(Jugadores jugador)
     {
         Figuritas.Add(jugador);
     }
