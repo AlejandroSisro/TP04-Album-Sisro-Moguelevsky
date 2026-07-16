@@ -1,8 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Álbum Digital";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<main class="inicio">
+
+    <h1>Álbum Digital Mundial 2026</h1>
+
+    <p>
+        ¡Bienvenido! Desde aquí podés abrir sobres de figuritas o ver tu colección.
+    </p>
+
+    <div class="botones">
+
+        <form action='@Url.Action("IndexAlbum","Home")' method="GET">
+            <input type="submit" value="Ver Álbum">
+        </form>
+
+        <form action='@Url.Action("IndexSobre","Home")' method="GET">
+            <input type="submit" value="Abrir Sobres">
+        </form>
+
+    </div>
+
+</main>
