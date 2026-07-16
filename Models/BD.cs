@@ -62,4 +62,26 @@ public class BD
             return connection.QueryFirstOrDefault<Jugadores>(query, new { pId = id });
         }
     }
+    public List<Jugadores> AbrirPaquete(int cantidad)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT * FROM Jugadores";
+
+        List<Jugadores> jugadores = connection.Query<Jugadores>(query).ToList();
+
+        Random random = new Random();
+        List<Jugadores> paquete = new List<Jugadores>();
+
+        while (paquete.Count < cantidad && jugadores.Count > 0)
+        {
+            int posicion = random.Next(jugadores.Count);
+
+            paquete.Add(jugadores[posicion]);
+            jugadores.RemoveAt(posicion);
+        }
+
+        return paquete;
+    }
+}
 }
