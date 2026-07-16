@@ -95,4 +95,14 @@ public class BD
             connection.Execute(query, new { idJugador });
         }
     }
+    public int ObtenerCantidad(int idJugador)
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
+    {
+        string query = "SELECT cantidad FROM Figuritas WHERE idJugador = @idJugador";
+
+        return connection.QueryFirstOrDefault<int>(query, new { idJugador });
+    }
+}
+
 }
