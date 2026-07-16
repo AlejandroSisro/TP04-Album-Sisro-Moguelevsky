@@ -3,7 +3,9 @@
 @{
     List<Jugadores> jugadores = ViewBag.Jugadores;
 }
-
+@{
+    BD bd = new BD();
+}
 <main>
 
 <h1>Album Digital</h1>
@@ -15,31 +17,32 @@
 
         @foreach(Jugadores jugador in jugadores)
         {
-            if(jugador.idSeleccion == 1)
+            @if(jugador.idSeleccion == 1 && bd.ObtenerCantidad(jugador.idJugador) > 0)
             {
                 <div class="figurita">
-                    <img src="~/images/jugadores/@jugador.foto" alt="@jugador.nombre" />
+                    <img src="~/images/jugadores/@jugador.foto" />
                     <p>@jugador.nombre</p>
+                    <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
                 </div>
             }
+
         }
 
     </div>
 
     <div class="Qatar">
         <h2>Qatar</h2>
-
         @foreach(Jugadores jugador in jugadores)
         {
-            if(jugador.idSeleccion == 2)
+            @if(jugador.idSeleccion == 2 && bd.ObtenerCantidad(jugador.idJugador) > 0)
             {
                 <div class="figurita">
-                    <img src="~/images/jugadores/@jugador.foto" alt="@jugador.nombre" />
+                    <img src="~/images/jugadores/@jugador.foto" />
                     <p>@jugador.nombre</p>
+                    <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
                 </div>
             }
         }
-
     </div>
 
 </section>
@@ -52,13 +55,15 @@
 
 @foreach(Jugadores jugador in jugadores)
 {
-    if(jugador.idSeleccion == 3)
+    @if(jugador.idSeleccion == 3 && bd.ObtenerCantidad(jugador.idJugador) > 0)
     {
         <div class="figurita">
-            <img src="~/images/jugadores/@jugador.foto" alt="@jugador.nombre" />
+            <img src="~/images/jugadores/@jugador.foto" />
             <p>@jugador.nombre</p>
+            <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
         </div>
     }
+
 }
 
 </div>
@@ -73,13 +78,15 @@
 
 @foreach(Jugadores jugador in jugadores)
 {
-    if(jugador.idSeleccion == 4)
-    {
-        <div class="figurita">
-            <img src="~/images/jugadores/@jugador.foto" alt="@jugador.nombre" />
-            <p>@jugador.nombre</p>
-        </div>
-    }
+    @if(jugador.idSeleccion == 4 && bd.ObtenerCantidad(jugador.idJugador) > 0)
+{
+    <div class="figurita">
+        <img src="~/images/jugadores/@jugador.foto" />
+        <p>@jugador.nombre</p>
+        <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
+    </div>
+}
+
 }
 
 </div>
@@ -90,13 +97,15 @@
 
 @foreach(Jugadores jugador in jugadores)
 {
-    if(jugador.idSeleccion == 5)
+    @if(jugador.idSeleccion == 5 && bd.ObtenerCantidad(jugador.idJugador) > 0)
     {
         <div class="figurita">
-            <img src="~/images/jugadores/@jugador.foto" alt="@jugador.nombre" />
+            <img src="~/images/jugadores/@jugador.foto" />
             <p>@jugador.nombre</p>
+            <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
         </div>
     }
+
 }
 
 </div>
@@ -111,13 +120,15 @@
 
 @foreach(Jugadores jugador in jugadores)
 {
-    if(jugador.idSeleccion == 6)
+    @if(jugador.idSeleccion == 6 && bd.ObtenerCantidad(jugador.idJugador) > 0)
     {
         <div class="figurita">
-            <img src="~/images/jugadores/@jugador.foto" alt="@jugador.nombre" />
+            <img src="~/images/jugadores/@jugador.foto" />
             <p>@jugador.nombre</p>
+            <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
         </div>
     }
+
 }
 
 </div>
