@@ -2,5 +2,12 @@
     ViewData["Title"] = "Abrir sobre";
 }
 <main>
-    <a href=""><img src="/images/sobre.png" alt="Imagen del sobre"></a>
+    <h1>Abrir sobres</h1>
+    <img src="/images/sobre.png" alt="Imagen del sobre">
+    <form action="SobreAbierto.cshtml">
+        <input type="radio" name="AbrirSobre" value="Abrir sobre">
+    </form>
+    <form action="IndexAlbum.cshtml">
+        <input type="radio" name="VerAlbum" value="Ver album">
+    </form>
 </main>
