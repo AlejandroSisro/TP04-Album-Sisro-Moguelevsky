@@ -31,5 +31,30 @@ public IActionResult Index()
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
         });
     }
+
+    public IActionResult IndexSobre()
+{
+    return View();
+}
+
+[HttpPost]
+public IActionResult AbrirSobre()
+{
+    BD bd = new BD();
+    ViewBag.Figuritas = bd.AbrirPaquete(7);
+
+    return View("IndexSobre");
+}
+
+
+public IActionResult IndexAlbum()
+{
+    BD bd = new BD();
+
+    ViewBag.Jugadores = bd.ObtenerJugadores();
+
+    return View();
+}
+
 }
 
