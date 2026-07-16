@@ -1,12 +1,8 @@
-    namespace TP04_Album_Sisro_Moguelevsky.Models;
+namespace TP04_Album_Sisro_Moguelevsky.Models;
 
-    public class Seleccion
-    {
-        public int IdSeleccion { get; set; }
-        public string Nombre { get; set; }
-        public string Grupo { get; set; }
-    }
-    public class Seleccion
-    {
-
-    }
+public class Selecciones
+{
+    public int IdSeleccion { get; set; }
+    public string Nombre { get; set; }
+    public string Grupo { get; set; }
+}
