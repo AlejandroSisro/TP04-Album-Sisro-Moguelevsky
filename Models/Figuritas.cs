@@ -7,7 +7,5 @@ public class Figuritas
     public int cantidad { get; set; }
     public int numeroCamiseta { get; set; }
 }
-public class Figuritas
-{
-}
+
 
