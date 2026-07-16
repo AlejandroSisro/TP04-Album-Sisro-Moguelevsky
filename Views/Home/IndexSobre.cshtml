@@ -1,13 +1,52 @@
+@using TP04_Album_Sisro_Moguelevsky.Models
+
 @{
-    ViewData["Title"] = "Abrir sobre";
+    ViewData["Title"] = "Abrir Sobre";
+    List<Jugadores> figuritas = ViewBag.Figuritas as List<Jugadores>;
 }
+
 <main>
-    <h1>Abrir sobres</h1>
-    <img src="/images/sobre.png" alt="Imagen del sobre">
-    <form action="SobreAbierto.cshtml">
-        <input type="radio" name="AbrirSobre" value="Abrir sobre">
+
+    <h1>Abrir Sobre</h1>
+
+    <img src="~/images/sobre.png"/>
+
+    <br /><br />
+
+    <form action='@Url.Action("AbrirSobre","Home")' method="POST">
+        <button type="submit">
+            Abrir Sobre
+        </button>
     </form>
-    <form action="IndexAlbum.cshtml">
-        <input type="radio" name="VerAlbum" value="Ver album">
-    </form>
+
+    <br />
+
+    <a href='@Url.Action("IndexAlbum","Home")'>
+    Ver Álbum
+    </a>
+        Ver Álbum
+    </a>
+
+    @if(figuritas != null)
+    {
+        <hr />
+
+        <h2>Te tocaron estas figuritas</h2>
+
+        <div class="figuritas">
+
+            @foreach(Jugadores jugador in figuritas)
+            {
+                <div class="figurita">
+
+                    <img src="~/images/jugadores/@jugador.foto" alt="@jugador.nombre" />
+
+                    <h4>@jugador.nombre</h4>
+
+                </div>
+            }
+
+        </div>
+    }
+
 </main>
