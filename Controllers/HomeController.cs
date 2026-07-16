@@ -15,12 +15,9 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        BD Album = new BD();
-        list<string> figurita = Album.ObtenerFiguritas();
-        Random rnd = new Random();
-        string seleccionada = figurita[rnd.Next(0,figurita.Count)];
-        ViewBag.Figurita = seleccionada;
-        return View();
+        BD album = new BD();
+        List<Jugadores> jugadores = album.ObtenerJugadores();
+        return View(jugadores);
     }
 
     public IActionResult Privacy()
@@ -31,6 +28,9 @@ public class HomeController : Controller
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        return View(new ErrorViewModel
+        {
+            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+        });
     }
 }
