@@ -7,35 +7,32 @@ public class BD
 {
     private string _connectionString = @"Server=localhost;Database=AlbumVirtual;Integrated Security=True;TrustServerCertificate=True;";
 
-    public List<Jugador> ObtenerJugadores()
+    public List<Jugadores> ObtenerJugadores()
     {
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT * FROM Jugadores";
-            return connection.Query<Jugador>(query).ToList();
+            return connection.Query<Jugadores>(query).ToList();
         }
     }
 
-    public List<Seleccion> ObtenerSelecciones()
+    public List<Selecciones> ObtenerSelecciones()
     {
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
             string query = "SELECT * FROM Selecciones";
-            return connection.Query<Seleccion>(query).ToList();
+            return connection.Query<Selecciones>(query).ToList();
         }
     }
 
-    public List<FiguritaUsuario> ObtenerFiguritas(int idUsuario)
+   public List<Figuritas> ObtenerFiguritas()
+{
+    using (SqlConnection connection = new SqlConnection(_connectionString))
     {
-        using(SqlConnection connection = new SqlConnection(_connectionString))
-        {
-            string query = @"SELECT *
-                             FROM Figuritas
-                             WHERE UsuarioId = @pId";
-
-            return connection.Query<FiguritaUsuario>(query, new { pId = idUsuario }).ToList();
-        }
+        string query = "SELECT * FROM Figuritas";
+        return connection.Query<Figuritas>(query).ToList();
     }
+}
 
     public void AgregarFigurita(int idUsuario, int idJugador)
     {
@@ -54,7 +51,7 @@ public class BD
         }
     }
 
-    public Jugador ObtenerJugador(int id)
+    public Jugadores ObtenerJugador(int id)
     {
         using(SqlConnection connection = new SqlConnection(_connectionString))
         {
@@ -62,7 +59,7 @@ public class BD
                              FROM Jugadores
                              WHERE IdJugador = @pId";
 
-            return connection.QueryFirstOrDefault<Jugador>(query, new { pId = id });
+            return connection.QueryFirstOrDefault<Jugadores>(query, new { pId = id });
         }
     }
 }
