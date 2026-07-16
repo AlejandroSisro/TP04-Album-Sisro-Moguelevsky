@@ -37,16 +37,6 @@ public IActionResult Index()
     return View();
 }
 
-[HttpPost]
-public IActionResult AbrirSobre()
-{
-    BD bd = new BD();
-    ViewBag.Figuritas = bd.AbrirPaquete(7);
-
-    return View("IndexSobre");
-}
-
-
 public IActionResult IndexAlbum()
 {
     BD bd = new BD();
@@ -54,6 +44,23 @@ public IActionResult IndexAlbum()
     ViewBag.Jugadores = bd.ObtenerJugadores();
 
     return View();
+}
+
+[HttpPost]
+public IActionResult AbrirSobre()
+{
+    BD bd = new BD();
+
+    List<Jugadores> paquete = bd.AbrirPaquete(5);
+
+    foreach (Jugadores jugador in paquete)
+    {
+        bd.SumarFigurita(jugador.idJugador);
+    }
+
+    ViewBag.Figuritas = paquete;
+
+    return View("IndexSobre");
 }
 
 }
