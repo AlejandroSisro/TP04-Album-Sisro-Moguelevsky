@@ -5,8 +5,6 @@ public class Jugadores
     public int idJugador { get; set; }
     public string nombre { get; set; }
     public string Apellido { get; set; }
-    public int numeroCamiseta { get; set; }
-    public string posicion { get; set; }
     public int edad { get; set; }
     public string foto { get; set; }
     public int idSeleccion { get; set; }
