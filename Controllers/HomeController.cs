@@ -12,14 +12,12 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
-    public IActionResult Index()
-    {
-        BD album = new BD();
-        List<Jugadores> jugadores = album.ObtenerJugadores();
-        return View(jugadores);
-    }
-
+public IActionResult Index()
+{
+    BD bd = new BD();
+    ViewBag.Jugadores = bd.ObtenerJugadores();
+    return View();
+}
     public IActionResult Privacy()
     {
         return View();
