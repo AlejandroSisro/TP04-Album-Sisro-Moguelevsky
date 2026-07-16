@@ -63,25 +63,36 @@ public class BD
         }
     }
     public List<Jugadores> AbrirPaquete(int cantidad)
-{
-    using (SqlConnection connection = new SqlConnection(_connectionString))
     {
-        string query = "SELECT * FROM Jugadores";
-
-        List<Jugadores> jugadores = connection.Query<Jugadores>(query).ToList();
-
-        Random random = new Random();
-        List<Jugadores> paquete = new List<Jugadores>();
-
-        while (paquete.Count < cantidad && jugadores.Count > 0)
+        using (SqlConnection connection = new SqlConnection(_connectionString))
         {
-            int posicion = random.Next(jugadores.Count);
+            string query = "SELECT * FROM Jugadores";
 
-            paquete.Add(jugadores[posicion]);
-            jugadores.RemoveAt(posicion);
+            List<Jugadores> jugadores = connection.Query<Jugadores>(query).ToList();
+
+            Random random = new Random();
+            List<Jugadores> paquete = new List<Jugadores>();
+
+            while (paquete.Count < cantidad && jugadores.Count > 0)
+            {
+                int posicion = random.Next(jugadores.Count);
+
+                paquete.Add(jugadores[posicion]);
+                jugadores.RemoveAt(posicion);
+            }
+
+            return paquete;
         }
-
-        return paquete;
     }
-}
+    public void SumarFigurita(int idJugador)
+    {
+        using (SqlConnection connection = new SqlConnection(_connectionString))
+        {
+            string query = @"UPDATE Figuritas
+                            SET cantidad = cantidad + 1
+                            WHERE idJugador = @idJugador";
+
+            connection.Execute(query, new { idJugador });
+        }
+    }
 }
