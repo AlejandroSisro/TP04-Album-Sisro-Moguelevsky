@@ -14,35 +14,38 @@
 
     <div class="Bosnia">
         <h2>Bosnia y Herzegovina</h2>
-
-        @foreach(Jugadores jugador in jugadores)
-        {
-            @if(jugador.idSeleccion == 1 && bd.ObtenerCantidad(jugador.idJugador) > 0)
+        <article class="Pais">
+            @foreach(Jugadores jugador in jugadores)
             {
-                <div class="figurita">
-                    <img src="~/images/jugadores/@jugador.foto" />
-                    <p>@jugador.nombre</p>
-                    <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
-                </div>
+                @if(jugador.idSeleccion == 1 && bd.ObtenerCantidad(jugador.idJugador) > 0)
+                {
+                    <div class="figurita">
+                        <img src="~/images/jugadores/@jugador.foto" />
+                        <p>@jugador.nombre</p>
+                        <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
+                    </div>
+                }
+
             }
-
-        }
-
+        </article>
     </div>
 
     <div class="Qatar">
         <h2>Qatar</h2>
-        @foreach(Jugadores jugador in jugadores)
-        {
-            @if(jugador.idSeleccion == 2 && bd.ObtenerCantidad(jugador.idJugador) > 0)
+        <article class="Pais">
+            @foreach(Jugadores jugador in jugadores)
             {
-                <div class="figurita">
-                    <img src="~/images/jugadores/@jugador.foto" />
-                    <p>@jugador.nombre</p>
-                    <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
-                </div>
-            }
-        }
+                @if(jugador.idSeleccion == 2 && bd.ObtenerCantidad(jugador.idJugador) > 0)
+                {
+                    <div class="figurita">
+                        <img src="~/images/jugadores/@jugador.foto" />
+                        <p>@jugador.nombre</p>
+                        <p>Cantidad: @bd.ObtenerCantidad(jugador.idJugador)</p>
+                    </div>
+                }
+            }    
+        </article>
+        
     </div>
 
 </section>
@@ -52,7 +55,7 @@
 <div class="Brasil">
 
 <h2>Brasil</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 3 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -65,7 +68,7 @@
     }
 
 }
-
+</article>
 </div>
 
 </section>
@@ -75,6 +78,7 @@
 <div class="Alemania">
 
 <h2>Alemania</h2>
+<article class="Pais">
 
 @foreach(Jugadores jugador in jugadores)
 {
@@ -87,14 +91,14 @@
     </div>
 }
 
-}
-
+} 
+</article>
 </div>
 
 <div class="CostaDeMarfil">
 
 <h2>Costa De Marfil</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 5 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -107,7 +111,7 @@
     }
 
 }
-
+</article>
 </div>
 
 </section>
@@ -117,7 +121,7 @@
 <div class="Suecia">
 
 <h2>Suecia</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 6 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -132,7 +136,7 @@
 }
 
 </div>
-
+</article>
 </section>
 
 <section class="GrupoH">
@@ -140,7 +144,7 @@
 <div class="España">
 
 <h2>España</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 7 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -152,11 +156,11 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 <div class="CaboVerde">
-
+<article class="Pais">
 <h2>Cabo Verde</h2>
 
 @foreach(Jugadores jugador in jugadores)
@@ -170,7 +174,7 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 </section>
@@ -180,7 +184,7 @@
 <div class="Francia">
 
 <h2>Francia</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 9 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -192,11 +196,11 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 <div class="Noruega">
-
+<article class="Pais">
 <h2>Noruega</h2>
 
 @foreach(Jugadores jugador in jugadores)
@@ -210,7 +214,7 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 </section>
@@ -220,7 +224,7 @@
 <div class="Argentina">
 
 <h2>Argentina</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 11 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -232,13 +236,13 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 <div class="Argelia">
 
 <h2>Argelia</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 12 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -250,7 +254,7 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 </section>
@@ -258,7 +262,7 @@
 <section class="GrupoK">
 
 <div class="RDCongo">
-
+<article class="Pais">
 <h2>República Democrática del Congo</h2>
 
 @foreach(Jugadores jugador in jugadores)
@@ -272,13 +276,13 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 <div class="Uzbekistan">
 
 <h2>Uzbekistan</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 14 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -290,7 +294,7 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 </section>
@@ -300,7 +304,7 @@
 <div class="Inglaterra">
 
 <h2>Inglaterra</h2>
-
+<article class="Pais">
 @foreach(Jugadores jugador in jugadores)
 {
     @if(jugador.idSeleccion == 15 && bd.ObtenerCantidad(jugador.idJugador) > 0)
@@ -312,7 +316,7 @@
                 </div>
             }
 }
-
+</article>
 </div>
 
 </section>
