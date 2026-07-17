@@ -24,6 +24,9 @@ div
 {
   background-color: #002F6C;
   border-bottom: 5px solid #FFCD00;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .Bosnia h2
 {
@@ -33,6 +36,9 @@ div
 {
   background-color: #8A1538;
   border-bottom: 5px solid #F4F0EA;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   
 }
 .Qatar h2
@@ -43,6 +49,9 @@ div
 {
     background-color: #009739;
     border-bottom: 5px solid #FEDD00;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Brasil h2
 {
@@ -52,6 +61,9 @@ div
 {
     background-color: #000000;
     border-bottom: 5px solid #FFCC00;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Alemania h2
 {
@@ -61,6 +73,9 @@ div
 {
     background-color: #09A440;
     border-bottom: 5px solid #FF8200;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .CostaDeMarfil h2
 {
@@ -70,6 +85,9 @@ div
 {
     background-color: #006AA7;
     border-bottom: 5px solid #FECC02;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Suecia h2
 {
@@ -79,6 +97,9 @@ div
 {
     background-color: #AA151B;
     border-bottom: 5px solid #F1BF00;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .España h2
 {
@@ -88,6 +109,9 @@ div
 {
     background-color: #003DA5;
     border-bottom: 5px solid #EF3340;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .CaboVerde h2
 {
@@ -97,6 +121,9 @@ div
 {
     background-color: #000091;
     border-bottom: 5px solid #E1000F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Francia h2
 {
@@ -106,6 +133,9 @@ div
 {
     background-color: #BA0C2F;
     border-bottom: 5px solid #00205B;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Noruega h2
 {
@@ -115,6 +145,9 @@ div
 {
     background-color: #6CACE4;
     border-bottom: 5px solid #FFB81C;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Argentina h2
 {
@@ -124,6 +157,9 @@ div
 {
     background-color: #006633;
     border-bottom: 5px solid #D21034;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Argelia h2
 {
@@ -133,6 +169,9 @@ div
 {
     background-color: #0085CA;
     border-bottom: 5px solid #EF3340;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .RDCongo h2
 {
@@ -142,6 +181,9 @@ div
 {
     background-color: #0072CE;
     border-bottom: 5px solid #DA291C;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Uzbekistan h2
 {
@@ -151,6 +193,9 @@ div
 {
     background-color: #FFFFFF;
     border-bottom: 5px solid #CE1124;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .Inglaterra h2
 {
@@ -192,18 +237,12 @@ div
 }
 
 .figurita{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     margin:1.5%;
     padding:1.5%;
     width: 180px;
     padding: 15px;
-
     border: 2px solid black;
     border-radius: 10px;
-
     background-color: white;
 }
 
